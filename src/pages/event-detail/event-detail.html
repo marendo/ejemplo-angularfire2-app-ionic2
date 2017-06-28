@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event Detail</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="goToHomePage()">
+        <ion-icon name="home"></ion-icon>
+       </button>
+    </ion-buttons>	
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{currentEvent?.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Ticket: <strong>${{currentEvent?.price}}</strong></p>
+      <p>Date: <strong>{{currentEvent?.date}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -14,15 +14,13 @@ export class HomePage {
   goToProfile(){ 
     this.navCtrl.push('ProfilePage'); 
   }  
-  
-  /**
-   * Calls the authentication provider and logs the user out, on successful logout it sends the user
-   * back to the login page.
-   */
-  logMeOut() {
-    this.authProvider.logoutUser().then( () => {
-      this.navCtrl.setRoot('LoginPage');
-    });
+
+  goToCreate(){ 
+	this.navCtrl.push('EventCreatePage'); 
+  }
+
+  goToList(){ 
+	this.navCtrl.push('EventListPage'); 
   }
 
 }

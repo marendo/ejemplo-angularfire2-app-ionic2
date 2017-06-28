@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfileProvider } from '../providers/profile/profile';
 import { AuthProvider } from '../providers/auth/auth';
+import { EventProvider } from '../providers/event/event';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -55,7 +56,8 @@ export const config = {
 	{provide: Camera, useClass: CameraMock},
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 	ProfileProvider,
-    AuthProvider
+    AuthProvider,
+	EventProvider
   ]
 })
 export class AppModule {}
